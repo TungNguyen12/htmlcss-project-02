@@ -72,6 +72,9 @@ h3 {
 }
 
 .btn-black {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
@@ -81,6 +84,9 @@ h3 {
 }
 
 .btn-yellow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
@@ -144,7 +150,6 @@ h3 {
     font-weight: 600;
     font-size: 1.6rem;
     line-height: 1.75;
-    /* identical to box height, or 175% */
     text-align: center;
     color: #ffffff;
 }
@@ -161,31 +166,14 @@ h3 {
     align-items: center;
 }
 
-.home-screen .ads {
-    width: 49%;
-}
-
 .home-screen .info {
     width: 40%;
 }
 
-/* h1 {
-    font-family: "Sen";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 5.8rem;
-    line-height: 1.17;
-    letter-spacing: -0.02em;
-    color: #171100;
-} */
-
-/* .home-screen .desc {
-    margin-top: 22px;
-} */
-
 /* =====Left ads content===== */
-.ads {
+.home-screen .ads {
     position: relative;
+    width: 49%;
 }
 .ads .student {
     width: 470px;
@@ -442,22 +430,78 @@ h3 {
     margin-top: 12px;
 }
 
-.bottom-row .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bottom-row .btn-black {
     padding: 12px 24px;
-    border-radius: 25px;
-    font-family: "Poppins";
-    font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.86;
-    text-align: center;
-    color: #ffffff;
-    background: #171100;
 }
 
-.bottom-row .btn:hover { 
+.bottom-row .btn-black:hover {
     background: #ffb900;
+}
+
+/* =====Student's review quotes===== */
+.review-quotes {
+    background: #2e2100;
+}
+.review-quotes .content {
+    display: flex;
+    padding: 96px 0;
+}
+
+.profile .desc {
+    margin-top: 4px;
+    font-size: 1.4rem;
+}
+
+.name {
+    margin-top: 18px;
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.42;
+    color: #f7f7f7;
+}
+
+.content .quotes {
+    display: flex;
+    margin-left: auto;
+    width: 66%;
+    font-family: "Poppins";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.54;
+    color: #ffffff;
+}
+
+.quotes img {
+    margin-top: -170px;
+}
+
+/* =====Course advertise===== */
+.advertise {
+    margin: 200px 0;
+}
+
+.ads-top {
+    display: flex;
+}
+
+.left {
+    display: flex;
+}
+.left img {
+    margin-bottom: 0;
+}
+.left img:last-of-type{
+    margin-bottom: 34px;
+    margin-left: 30px;
+    width: 270px;
+    height: 405px;
+    object-fit: cover;
+    border-radius: 16px;
+
 }
