@@ -14,6 +14,10 @@ html {
 /* Common setting */
 a {
     text-decoration: none;
+    /* color: #ffffff; */
+}
+
+.btn a {
     color: #ffffff;
 }
 
@@ -39,13 +43,21 @@ a:hover {
 }
 
 .btn-black {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
     background: #171100;
     border-radius: 25px;
+    text-align: center;
 }
 
 .btn-yellow {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
     background: #ffb900;
     border-radius: 26px;
+    text-align: center;
 }
 /* Navigation bar */
 .fixed-header {
@@ -117,6 +129,15 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 }
+
+.home-screen .ads {
+    width: 49%;
+}
+
+.home-screen .info {
+    width: 40%;
+}
+
 .home-screen .heading {
     font-family: "Sen";
     font-style: normal;
@@ -127,14 +148,97 @@ a:hover {
     color: #171100;
 }
 
+/* .home-screen .desc {
+    margin-top: 22px;
+} */
+
+/* =====Left ads content===== */
+
+.ads .student {
+    width: 470px;
+    height: 685px;
+    border-radius: 20px;
+}
+
+.ads .courses {
+    width: 270px;
+    height: 244px;
+    background: #ffffff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+/* =====Right statistic content===== */
 .info {
     margin: 64px 0;
 }
 
-.home-screen .ads {
-    width: 49%;
+.info .buttons {
+    display: flex;
+    margin-top: 38px;
 }
 
-.home-screen .info {
-    width: 40%;
+.info .btn-yellow {
+    padding: 17px 33px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    border-radius: 32px;
+}
+
+.home-screen .info p:last-child {
+    margin-top: 48px;
+}
+
+.btn-watch, .courses .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 28px;
+}
+
+.btn-watch .btn-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+}
+
+.btn-watch .watch {
+    margin-left: 14px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
+.info p:first-of-type {
+    margin-top: 22px;
+}
+
+.info p:last-of-type {
+    margin-top: 48px;
+}
+
+.info ul {
+    display: flex;
+    margin-top: 8px;
+}
+
+.info .desc strong {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 1.23;
+    color: #171100;
+}
+
+.info li:last-child {
+    margin-left: 28px;
 }
