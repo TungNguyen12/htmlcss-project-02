@@ -33,6 +33,35 @@ a:hover {
     margin-right: auto; */
 }
 
+h1 {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+h2 {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.8rem;
+    line-height: 1.26;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
+}
+
 .desc {
     font-family: "Poppins";
     font-style: normal;
@@ -62,6 +91,8 @@ a:hover {
 /* Navigation bar */
 .fixed-header {
     background-color: var(--main-color);
+    position: sticky;
+    z-index: 1;
 }
 .nav-bar {
     display: flex;
@@ -138,7 +169,7 @@ a:hover {
     width: 40%;
 }
 
-.home-screen .heading {
+/* h1 {
     font-family: "Sen";
     font-style: normal;
     font-weight: 700;
@@ -146,7 +177,7 @@ a:hover {
     line-height: 1.17;
     letter-spacing: -0.02em;
     color: #171100;
-}
+} */
 
 /* .home-screen .desc {
     margin-top: 22px;
@@ -193,20 +224,20 @@ a:hover {
     align-items: center;
     justify-content: center;
     width: 48px;
-height: 48px;
-border-radius: 50%;
+    height: 48px;
+    border-radius: 50%;
 }
 
 .icon-yellow {
-    background: #FFF9E8;
+    background: #fff9e8;
 }
 
 .icon-purple {
-    background: #FCEFFF;
+    background: #fcefff;
 }
 
 .icon-blue {
-    background: #EBEAFF;
+    background: #ebeaff;
 }
 
 .courses .course-info {
@@ -219,14 +250,14 @@ border-radius: 50%;
     color: #5f5b53;
 }
 
-.course-info h3 {
+/* .course-info h3 {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     font-size: 1.8rem;
     line-height: 1.67;
     color: #171100;
-}
+} */
 
 /* =====Right statistic content===== */
 .info {
@@ -305,4 +336,128 @@ border-radius: 50%;
 
 .info li:last-child {
     margin-left: 28px;
+}
+
+/* =====Course Info===== */
+
+.popular-courses .content {
+    padding: 200px 0;
+}
+
+/* Course heading */
+
+.popular-courses .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading .description {
+    width: 458px;
+}
+
+.heading .slide-btn {
+    display: flex;
+}
+
+.slide-btn .action-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffb900;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffb900;
+    border-radius: 50%;
+}
+
+.slide-btn .action-icon:hover {
+    color: #ffffff;
+    background: #ffb900;
+}
+
+.slide-btn a:first-child {
+    margin-right: 18px;
+}
+
+/* Course list */
+.course-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.course-list li {
+    width: 370px;
+    border: #e5e5e5 solid 1px;
+    border-radius: 12px;
+}
+/* .course-list li:hover {
+    border: #e5e5e5;
+    background: #ffffff;
+
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+} */
+
+.course-list .details {
+    margin: 16px 22px 22px;
+}
+
+.details .first-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-row .rate {
+    display: flex;
+    align-items: center;
+}
+
+.first-row .rate img {
+    margin-right: 6px;
+}
+
+.first-row span {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #fea31b;
+}
+
+.description .desc {
+    margin-top: 16px;
+}
+
+.details .desc {
+    font-size: 14px;
+}
+
+.details .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.bottom-row .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    text-align: center;
+    color: #ffffff;
+    background: #171100;
+}
+
+.bottom-row .btn:hover { 
+    background: #ffb900;
 }
