@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #fffcf4;
+}
+
+/* 1rem = 16px default => change 1rem = 10px*/
+html {
+    font-size: 62.5%;
+}
+
+/* Common setting */
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+}
+
+.content {
+    width: 1170px;
+    max-width: calc(100% -135px);
+    margin-right: auto;
+    margin-left: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+}
+
+.desc {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #5f5b53;
+}
+
+.btn-black {
+    background: #171100;
+    border-radius: 25px;
+}
+
+.btn-yellow {
+    background: #ffb900;
+    border-radius: 26px;
+}
+/* Navigation bar */
+.fixed-header {
+    background-color: var(--main-color);
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    padding-top: 36px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    /* identical to box height, or 175% */
+    text-align: center;
+    color: #5f5b53;
+}
+.nav-list li {
+    margin-right: 42px;
+}
+
+.nav-list a {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    /* identical to box height, or 175% */
+    text-align: center;
+    color: #5f5b53;
+}
+
+.nav-list a:hover {
+    font-weight: 600;
+    color: #171100;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+.btn-black {
+    margin-left: 70px;
+    padding: 11px 41px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    /* identical to box height, or 175% */
+    text-align: center;
+    color: #ffffff;
+}
+
+.home-screen {
+    padding: 64px 0 65px;
+    height: calc(100vh - 86px);
+    background: var(--main-color);
+}
+
+.home-screen .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home-screen .heading {
+    font-family: "Sen";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 1.17;
+    letter-spacing: -0.02em;
+    color: #171100;
+}
+
+.info {
+    margin: 64px 0;
+}
+
+.home-screen .ads {
+    width: 49%;
+}
+
+.home-screen .info {
+    width: 40%;
+}
