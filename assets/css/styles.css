@@ -153,7 +153,9 @@ a:hover {
 } */
 
 /* =====Left ads content===== */
-
+.ads {
+    position: relative;
+}
 .ads .student {
     width: 470px;
     height: 685px;
@@ -161,11 +163,69 @@ a:hover {
 }
 
 .ads .courses {
-    width: 270px;
-    height: 244px;
+    position: absolute;
+    right: 0;
+    bottom: 48px;
+    display: inline-block;
     background: #ffffff;
     box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
+}
+
+.courses ul {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 58px 24px 24px;
+}
+
+.courses li {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+}
+
+.courses li:first-of-type {
+    margin-top: 0px;
+}
+
+.courses .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+height: 48px;
+border-radius: 50%;
+}
+
+.icon-yellow {
+    background: #FFF9E8;
+}
+
+.icon-purple {
+    background: #FCEFFF;
+}
+
+.icon-blue {
+    background: #EBEAFF;
+}
+
+.courses .course-info {
+    margin-left: 16px;
+}
+
+.course-info .desc {
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #5f5b53;
+}
+
+.course-info h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 1.67;
+    color: #171100;
 }
 
 /* =====Right statistic content===== */
@@ -189,10 +249,14 @@ a:hover {
     margin-top: 48px;
 }
 
-.btn-watch, .courses .icon {
+.btn-watch,
+.courses .icon {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btn-watch {
     margin-left: 28px;
 }
 
