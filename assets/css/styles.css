@@ -25,6 +25,9 @@ a:hover {
 }
 
 .content {
+    /* display: flex;
+    justify-content: space-between;    
+    align-items: center; */
     width: 1170px;
     max-width: calc(100% -135px);
     margin-right: auto;
@@ -72,27 +75,26 @@ h3 {
 }
 
 .btn-black {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 11px 41px;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 1.75;
     background: #171100;
     border-radius: 25px;
     text-align: center;
+    color: #ffffff;
 }
 
 .btn-yellow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
     background: #ffb900;
     border-radius: 26px;
     text-align: center;
+    color: #ffffff;
 }
 /* Navigation bar */
 .fixed-header {
@@ -110,6 +112,7 @@ h3 {
     display: flex;
     justify-content: space-between;
     margin-left: auto;
+    margin-right: 70px;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -142,7 +145,7 @@ h3 {
 .nav-list li:last-child {
     margin-right: 0;
 }
-.btn-black {
+/* .btn-black {
     margin-left: 70px;
     padding: 11px 41px;
     font-family: "Poppins";
@@ -152,7 +155,7 @@ h3 {
     line-height: 1.75;
     text-align: center;
     color: #ffffff;
-}
+} */
 
 .home-screen {
     padding: 64px 0 65px;
@@ -370,25 +373,25 @@ h3 {
 }
 
 /* Course list */
-.course-list {
+.card-list {
     display: flex;
     justify-content: space-between;
     margin-top: 55px;
 }
 
-.course-list li {
+.card-list li {
     width: 370px;
     border: #e5e5e5 solid 1px;
     border-radius: 12px;
 }
-/* .course-list li:hover {
+/* .card-list li:hover {
     border: #e5e5e5;
     background: #ffffff;
 
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
 } */
 
-.course-list .details {
+.card-list .details {
     margin: 16px 22px 22px;
 }
 
@@ -430,14 +433,14 @@ h3 {
     margin-top: 12px;
 }
 
-.bottom-row .btn-black {
+.details .btn-black {
+    max-width: 118px;
     padding: 12px 24px;
-    font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.86;
 }
 
-.bottom-row .btn-black:hover {
+.details .btn-black:hover {
     background: #ffb900;
 }
 
@@ -488,20 +491,101 @@ h3 {
 
 .ads-top {
     display: flex;
+    justify-content: space-between;
 }
 
-.left {
+.left-top {
     display: flex;
+    width: 48.71%;
 }
-.left img {
+.left-top img {
     margin-bottom: 0;
 }
-.left img:last-of-type{
+
+.left-top img:first-of-type {
+    margin-top: 34px;
+}
+
+.left-top img:last-of-type {
     margin-bottom: 34px;
     margin-left: 30px;
     width: 270px;
     height: 405px;
     object-fit: cover;
     border-radius: 16px;
+}
 
+.right-top {
+    width: 40.18%;
+    margin: 58px 0;
+}
+
+.advertise .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.advertise .btn-yellow {
+    width: 137px;
+    margin-top: 32px;
+    padding: 11px 31px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: #ffffff;
+    border-radius: 26px;
+}
+
+.ads-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.left-down {
+    width: 48.71%;
+}
+
+.right-down {
+    width: 40.18%;
+}
+
+/* =====Our blog===== */
+.blog-box {
+    background-color: var(--main-color);
+    padding: 96px 0;
+}
+
+.title {
+    width: 38.3%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.title .desc {
+    margin-top: 16px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.blog h3 {
+    font-size: 1.6rem;
+    margin: 12px 0;
+}
+
+.blog .details .desc {
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+.blog .details p::after {
+    display: inline-block;
+    margin: 26px 0;
+    width: 160px;
+    height: 1px;
+    content: "";
+    background: #e2dfda;
+    border-radius: 0.5px;
 }
