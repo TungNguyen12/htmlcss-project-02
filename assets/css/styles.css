@@ -25,15 +25,10 @@ a:hover {
 }
 
 .content {
-    /* display: flex;
-    justify-content: space-between;    
-    align-items: center; */
     width: 1170px;
     max-width: calc(100% -135px);
     margin-right: auto;
     margin-left: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 h1 {
@@ -43,7 +38,14 @@ h1 {
     font-size: 5.8rem;
     line-height: 1.17;
     letter-spacing: -0.02em;
-    color: #171100;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+        64.3deg,
+        rgba(254, 122, 152, 0.81) 17.7%,
+        rgba(255, 206, 134, 1) 64.7%,
+        rgba(172, 253, 163, 0.64) 112.1%
+    );
 }
 
 h2 {
@@ -53,10 +55,18 @@ h2 {
     font-size: 3.8rem;
     line-height: 1.26;
     letter-spacing: -0.02em;
-    color: #171100;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(
+        109.6deg,
+        rgba(255, 179, 189, 1) 1.8%,
+        rgba(254, 248, 154, 1) 50.6%,
+        rgba(161, 224, 186, 1) 100.3%
+    );
 }
 
-h3 {
+h3,
+.price {
     font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
@@ -75,6 +85,7 @@ h3 {
 }
 
 .btn-black {
+    display: inline;
     padding: 11px 41px;
     font-family: "Poppins";
     font-style: normal;
@@ -85,6 +96,14 @@ h3 {
     border-radius: 25px;
     text-align: center;
     color: #ffffff;
+}
+
+.popular-courses .btn-black {
+    background-image: linear-gradient(
+        109.6deg,
+        rgba(62, 161, 219, 1) 11.2%,
+        rgba(93, 52, 236, 1) 100.2%
+    );
 }
 
 .btn-yellow {
@@ -100,12 +119,13 @@ h3 {
 .fixed-header {
     background-color: var(--main-color);
     position: sticky;
+    top: 0px;
     z-index: 1;
 }
 .nav-bar {
     display: flex;
     align-items: center;
-    padding-top: 36px;
+    padding: 10px 0;
 }
 
 .nav-list {
@@ -129,6 +149,8 @@ h3 {
 .nav-list a {
     font-family: "Poppins";
     font-style: normal;
+    /* max-width: 44px; */
+
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.75;
@@ -138,7 +160,8 @@ h3 {
 }
 
 .nav-list a:hover {
-    font-weight: 600;
+    /* font-weight: 600; */
+    text-shadow: 1px 0 0 currentColor;
     color: #171100;
 }
 
@@ -182,6 +205,7 @@ h3 {
     width: 470px;
     height: 685px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .ads .courses {
@@ -241,15 +265,6 @@ h3 {
     color: #5f5b53;
 }
 
-/* .course-info h3 {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 1.67;
-    color: #171100;
-} */
-
 /* =====Right statistic content===== */
 .info {
     margin: 64px 0;
@@ -293,7 +308,7 @@ h3 {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
 }
 
-.btn-watch .watch {
+.btn-watch .watch-video a {
     margin-left: 14px;
     font-family: "Poppins";
     font-style: normal;
@@ -335,9 +350,22 @@ h3 {
     padding: 200px 0;
 }
 
+.popular-courses h2 {
+    background-image: linear-gradient(
+        105.3deg,
+        rgba(30, 39, 107, 1) 21.8%,
+        rgba(77, 118, 221, 1) 100.2%
+    );
+}
+
 /* Course heading */
 
-.popular-courses .heading {
+.heading,
+.details .first-row,
+.details .bottom-row,
+.dots,
+.info-footer,
+.contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -375,30 +403,37 @@ h3 {
 /* Course list */
 .card-list {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
     margin-top: 55px;
 }
 
 .card-list li {
-    width: 370px;
-    border: #e5e5e5 solid 1px;
+    flex: 1;
+    border: 1px solid #e2dfda;
     border-radius: 12px;
+    background-color: #ffffff;
 }
-/* .card-list li:hover {
-    border: #e5e5e5;
-    background: #ffffff;
-
+.card-list li .course-img {
+    height: 278px;
+    width: calc(100% + 2px);
+    margin: -1px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+/* /*.popular-courses*/
+.card-list li:hover {
+    border: 1px solid white;
     box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
-} */
+}
 
 .card-list .details {
     margin: 16px 22px 22px;
 }
 
-.details .first-row {
+/* .details .first-row, .details .bottom-row  {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 .first-row .rate {
     display: flex;
@@ -423,18 +458,16 @@ h3 {
 }
 
 .details .desc {
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 .details .bottom-row {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: 12px;
 }
 
 .details .btn-black {
-    max-width: 118px;
+    min-width: 118px;
     padding: 12px 24px;
     font-size: 1.4rem;
     line-height: 1.86;
@@ -446,16 +479,33 @@ h3 {
 
 /* =====Student's review quotes===== */
 .review-quotes {
-    background: #2e2100;
+    background: #111d3b;
 }
 .review-quotes .content {
     display: flex;
     padding: 96px 0;
 }
 
+.profile .avatar {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border: rgb(231, 206, 92) solid 1px;
+    border-radius: 50%;
+}
 .profile .desc {
     margin-top: 4px;
     font-size: 1.4rem;
+    color: #f7f7f7;
+}
+
+.profile .dots {
+    justify-content: flex-start;
+    margin-top: 28px;
+}
+
+.profile .dot {
+    background-color: #f7f7f7;
 }
 
 .name {
@@ -481,7 +531,12 @@ h3 {
 }
 
 .quotes img {
-    margin-top: -170px;
+    width: 30px;
+    height: 28px;
+}
+
+.quotes blockquote {
+    margin-top: 28px;
 }
 
 /* =====Course advertise===== */
@@ -489,17 +544,39 @@ h3 {
     margin: 200px 0;
 }
 
-.ads-top {
+.advertise h2 {
+    background-image: linear-gradient(
+        178.2deg,
+        rgba(118, 8, 23, 1) 10.9%,
+        rgba(158, 12, 33, 1) 62.6%
+    );
+}
+
+.ads-top,
+.ads-down {
     display: flex;
     justify-content: space-between;
 }
 
 .left-top {
     display: flex;
+}
+
+.left-top,
+.left-down {
     width: 48.71%;
 }
+
+.right-top,
+.right-down {
+    width: 40.18%;
+}
+
 .left-top img {
     margin-bottom: 0;
+    width: 270px;
+    height: 404px;
+    border-radius: 16px;
 }
 
 .left-top img:first-of-type {
@@ -516,8 +593,14 @@ h3 {
 }
 
 .right-top {
-    width: 40.18%;
     margin: 58px 0;
+}
+
+.right-down img {
+    width: 470px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 20px;
 }
 
 .advertise .desc {
@@ -537,18 +620,8 @@ h3 {
 }
 
 .ads-down {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: 200px;
-}
-
-.left-down {
-    width: 48.71%;
-}
-
-.right-down {
-    width: 40.18%;
 }
 
 /* =====Our blog===== */
@@ -570,22 +643,165 @@ h3 {
     line-height: 1.75;
 }
 
+.blog h2 {
+    background-image: radial-gradient(
+        circle 369px at -2.9% 12.9%,
+        rgba(247, 234, 163, 1) 0%,
+        rgba(236, 180, 238, 0.56) 46.4%,
+        rgba(163, 203, 247, 1) 100.7%
+    );
+}
+
 .blog h3 {
     font-size: 1.6rem;
     margin: 12px 0;
 }
 
-.blog .details .desc {
-    margin-top: 20px;
-    font-size: 1.4rem;
+/* .blog .details h3 {
+    color: black;
+} */
+
+.blog .card-list li {
+    border-radius: 16px;
 }
 
-.blog .details p::after {
+.blog .card-list li:hover {
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+}
+
+.blog .blog-img {
+    height: 250px;
+    width: calc(100% + 2px);
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+}
+.blog .details {
+    margin: 20px 20px 28px;
+}
+
+.blog .details .desc {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.blog .details p::before {
     display: inline-block;
-    margin: 26px 0;
+    margin-right: 4px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    content: "";
+    background: #fea31b;
+}
+
+.divide-line {
+    display: block;
+    margin-top: 12px;
+    content: "";
     width: 160px;
     height: 1px;
-    content: "";
-    background: #e2dfda;
+    background: #be963d;
     border-radius: 0.5px;
+}
+
+.blog .btn-black {
+    display: inline-block;
+    padding: 12px 21px;
+}
+
+.dots {
+    justify-content: center;
+    margin-top: 38px;
+    gap: 6px;
+}
+.dot {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: #5f5b53;
+    border-radius: 50%;
+}
+
+.dots .dot:hover {
+    background: #ffb900;
+}
+
+/* =====Footer===== */
+footer {
+    padding: 96px 0 28px;
+    background: #111d3b;
+}
+
+footer .social {
+    width: 23%;
+}
+
+.social .desc {
+    margin-top: 18px;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.social .icons-row {
+    margin-top: 18px;
+}
+
+.icons-row img {
+    margin-left: 18px;
+}
+
+.icons-row img:first-of-type {
+    margin-left: 0;
+}
+
+.info-footer,
+.contact {
+    align-items: flex-start;
+}
+
+.contact {
+    gap: 130px;
+}
+
+.contact h3 {
+    color: #ffffff;
+}
+
+.contact .divide-line {
+    margin-bottom: 28px;
+    width: 130px;
+    background-color: white;
+}
+
+.contact li {
+    margin-top: 12px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #ffffff;
+}
+
+.contact li strong {
+    font-weight: 600;
+}
+
+.contact ul:last-of-type {
+    width: 231px;
+}
+
+hr {
+    display: block;
+    margin-top: 38px;
+    margin-bottom: 28px;
+    background: #ffffff;
+}
+
+footer .Copyright {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.86;
+    color: #ffffff;
 }
