@@ -17,25 +17,61 @@
         />
         <!-- Style -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <script defer src="script.js"></script>
     </head>
     <body>
         <!-- Header nav-bar -->
         <header class="fixed-header">
             <div class="content">
-                <div class="nav-bar">
+                <!-- PC Nav Bar -->
+                <div class="nav__pc">
                     <img
                         src="./assets/img/Logo-page.svg"
                         alt="Lesson."
                         class="logo"
                     />
                     <ul class="nav-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#!">Course</a></li>
-                        <li><a href="#!">Pricing</a></li>
-                        <li><a href="#!">Reviews</a></li>
+                        <li><a class="nav__link" href="#">Home</a></li>
+                        <li><a class="nav__link" href="#!">Course</a></li>
+                        <li><a class="nav__link" href="#!">Reviews</a></li>
+                        <li><a class="nav__link" href="#!">Pricing</a></li>
                     </ul>
                     <div class="btn-black btn"><a href="#!">Sign Up</a></div>
                 </div>
+
+                <!-- Mobile Nav Bar -->
+                <div class="nav__mobile">
+                    <label
+                        for="nav__mobile-input"
+                        class="nav__mobile--menu-burger"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
+                    <input type="checkbox" id="nav__mobile-input" />
+                    <img
+                        src="./assets/img/Logo-page.svg"
+                        alt="Lesson."
+                        class="logo"
+                    />
+                    <!-- <div class="btn-black btn btn__sign-up"><a href="#!">Sign Up</a></div> -->
+                </div>
+                <nav class="nav__mobile--nav-list">
+                    <ul>
+                        <li><a class="nav__link" href="#">Home</a></li>
+                        <li><a class="nav__link" href="#!">Course</a></li>
+                        <li><a class="nav__link" href="#!">Reviews</a></li>
+                        <li><a class="nav__link" href="#!">Pricing</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <main>
@@ -136,12 +172,194 @@
                             </p>
                         </div>
                         <div class="slide-btn">
-                            <a class="action-icon btn" href="#!">&lt;</a>
-                            <a class="action-icon btn" href="#!">&gt;</a>
+                            <a
+                                class="action-icon btn slider__btn--left"
+                                href="#!"
+                                >&lt;</a
+                            >
+                            <a
+                                class="action-icon btn slider__btn--right"
+                                href="#!"
+                                >&gt;</a
+                            >
                         </div>
                     </div>
                     <!-- Course list -->
                     <ul class="card-list">
+                        <li>
+                            <a href="#!">
+                                <img
+                                    class="course-img"
+                                    src="./assets/img/Web-design.jpg"
+                                    alt="Web design course"
+                                />
+                                <div class="details">
+                                    <div class="first-row">
+                                        <h3>Basic web design</h3>
+                                        <div class="rate">
+                                            <img
+                                                src="./assets/img/Star 6.svg"
+                                                alt="Star"
+                                            /><span>4.5</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="bottom-row">
+                                        <span class="price">$120.75</span>
+                                        <div class="btn-black">Book now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img
+                                    class="course-img"
+                                    src="./assets/img/UXUI.jpg"
+                                    alt="UX/UI course"
+                                />
+                                <div class="details">
+                                    <div class="first-row">
+                                        <h3>UI/UX design</h3>
+                                        <div class="rate">
+                                            <img
+                                                src="./assets/img/Star 6.svg"
+                                                alt="Star"
+                                            /><span>4.5</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="bottom-row">
+                                        <span class="price">$120.75</span>
+                                        <div class="btn-black">Book now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img
+                                    class="course-img"
+                                    src="./assets/img/Photography.jpg"
+                                    alt="App design course"
+                                />
+                                <div class="details">
+                                    <div class="first-row">
+                                        <h3>Photography</h3>
+                                        <div class="rate">
+                                            <img
+                                                src="./assets/img/Star 6.svg"
+                                                alt="Star"
+                                            /><span>4.5</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="bottom-row">
+                                        <span class="price">$120.75</span>
+                                        <div class="btn-black">Book now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img
+                                    class="course-img"
+                                    src="./assets/img/Web-design.jpg"
+                                    alt="Web design course"
+                                />
+                                <div class="details">
+                                    <div class="first-row">
+                                        <h3>Basic web design</h3>
+                                        <div class="rate">
+                                            <img
+                                                src="./assets/img/Star 6.svg"
+                                                alt="Star"
+                                            /><span>4.5</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="bottom-row">
+                                        <span class="price">$120.75</span>
+                                        <div class="btn-black">Book now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img
+                                    class="course-img"
+                                    src="./assets/img/UXUI.jpg"
+                                    alt="UX/UI course"
+                                />
+                                <div class="details">
+                                    <div class="first-row">
+                                        <h3>UI/UX design</h3>
+                                        <div class="rate">
+                                            <img
+                                                src="./assets/img/Star 6.svg"
+                                                alt="Star"
+                                            /><span>4.5</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="bottom-row">
+                                        <span class="price">$120.75</span>
+                                        <div class="btn-black">Book now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!">
+                                <img
+                                    class="course-img"
+                                    src="./assets/img/Photography.jpg"
+                                    alt="App design course"
+                                />
+                                <div class="details">
+                                    <div class="first-row">
+                                        <h3>Photography</h3>
+                                        <div class="rate">
+                                            <img
+                                                src="./assets/img/Star 6.svg"
+                                                alt="Star"
+                                            /><span>4.5</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="desc">
+                                        Get the best course, gain knowledge and
+                                        shine for your future career.
+                                    </p>
+                                    <div class="bottom-row">
+                                        <span class="price">$120.75</span>
+                                        <div class="btn-black">Book now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
                         <li>
                             <a href="#!">
                                 <img
